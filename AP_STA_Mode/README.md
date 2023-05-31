@@ -55,12 +55,57 @@ change service to /usr/sbin/service
 
 ## Test
 
-if it worked, you should be able to see the wifi SSID log.local, connect via usb, and connect to the internet
+if it worked, you should be able to see the wifi SSID [Whatever you set], connect via usb, and connect to the internet
 
 
 ## Backup again Once it works!
 
-# remove pw for the AP
+# remove pw for the AP (if you want a no-password WiFi)
 - edit /etc/hostapd/hostapd.conf
     `sudo nano /etc/hostapd/hostapd.conf`
 - comment out all lines that start with wpa_ or rsn_
+
+
+# Set up Webserver
+
+Instal Apache2:
+`sudo apt-get install apache2` 
+
+## test
+- when you're connected to the WiFi, go to web page: http://[hostname or IP]/ and see the default apache webpage
+- this should work when connected via USB, or when connected to the log SSID
+
+
+# Install PHP
+
+`sudo apt-get install php`
+
+create files
+`sudo nano /var/www/html/info.php` 
+and
+`sudo nano /var/www/html/index.php` 
+with contents:
+`<?php phpinfo(); ?>`
+
+## Test 
+go to:
+http://[hostname or IP]/info.php 
+and see all the details of the php installation.
+
+get rid of /var/www/html/index.html, so /var/www/html/index.php is the default
+`sudo mv /var/www/html/index.html /var/www/html/index.html.bak`
+
+
+# Install SQLite3 for php
+`sudo apt-get install php-sqlite3`
+
+reboot
+
+
+# fix some permissions for pi and apache
+Add pi to www-data group
+`sudo usermod -a -G www-data pi` 
+
+make sure www-data owns everything in /var/www/html
+`sudo chown -R -f www-data:www-data /var/www/html`
+
