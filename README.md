@@ -11,16 +11,9 @@ Will have a nice index/table of contents
 
 Later I could make each recipe into a blog/social media post or something.
 
-
-
-# Ideas
-- Connecting bluetooth headphones in Rpi
-- Setting up Rpi as Wifi Access point and webserver
-- Servos in RPi
-- PiJuice Solutions
+# TODO
 - Udp/OSC communication btw max, node, python, arduino, web, etc
 - esp32 communication
-- rpi ssh
 - rPi thermal printer
 - audio in RPi
 - Max/Msp Patches
