@@ -3,7 +3,6 @@
  ****************************************/
 #include <ESP8266WiFi.h>
 #include <ConfigManager.h>
-#include <PubSubClient.h>
 
 /****************************************
  * Define Constants
