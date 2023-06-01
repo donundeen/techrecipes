@@ -21,6 +21,8 @@ Later I could make each recipe into a blog/social media post or something.
 - [RPI_install](RPI_install) : Getting your first RPI install up and running
 - [Servo_Tricks](Servo_Tricks) : using a servo with the Raspberry Pi
 - [University_Wifi](University_WiFi) : getting your Pi to connect to a University Wifi
+- [ESP32_MQTT](ESP32_MQTT) : using MQTT on an Arduino ESP32
+- [Arduino_Wifi_Setup](Arduino_Wifi_Setup) : Setting up Wifi on an Arduino ESP32
 
 # TODO
 - Udp/OSC communication btw max, node, python, arduino, web, etc
