@@ -23,7 +23,8 @@ Upload the index.html file found in the data directory into the SPIFFS. Instruct
 - Arduino IDE : https://github.com/me-no-dev/arduino-esp32fs-plugin
 - Platform IO : https://docs.platformio.org/en/stable/platforms/espressif32.html#uploading-files-to-file-system-spiffs
 
-## A more robust method
+## A more robust method, custom variables, and UDP implementation as well
+
 This code shows how to set up an arduino
 to create an Access Point and Capture page that presents a form
 that can be used to configure the SSID and PW the Arduino will connect to
@@ -35,12 +36,14 @@ non-volatile memory, to be loaded every time the arduino starts.
 Super useful for makeing devices that you don't want to regrogram all the time,
 just to change a few settings
 
+AND
+
+OSC over UDP implementation 
 
 Requires that one pin (in this case A0) be attached to a button. (see resetButtonPin to change A0 to something else)
-Pin needs to hve built-in pullup resistor, or make your own pullup
+Pin needs to have built-in pullup resistor, or make your own pullup
 hold down the button while turning arduino on, to activate the configuration page.
 If the arduino starts and can't find wifi, it will also load the configuration page.
-
 
 Note: right now, if the arduino can't find wifi after you've set it,
 it won't save your custom config vars
